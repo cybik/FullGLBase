@@ -30,19 +30,19 @@ OBJCOPY   = $(NDK_BIN_DIR)/$(NDK_PREFIX)objcopy
 
 all: debug release 
 
-debug: build_NvUI_debug 
+debug: build_NvAppBase_debug build_NvAssetLoader_debug build_NvEGLUtil_debug build_NvGLUtils_debug build_NvGamepad_debug build_NvModel_debug build_NvUI_debug
 
-release: build_NvUI_release 
+release: build_NvAppBase_release build_NvAssetLoader_release build_NvEGLUtil_release build_NvGLUtils_release build_NvGamepad_release build_NvModel_release build_NvUI_release
 
-clean: clean_NvUI_debug clean_NvUI_release 
+clean: clean_debug clean_release 
 	rm -rf $(DEPSDIR)
 
 
-clean_debug: clean_NvUI_debug 
+clean_debug: clean_NvAppBase_debug clean_NvAssetLoader_debug clean_NvEGLUtil_debug clean_NvGLUtils_debug clean_NvGamepad_debug clean_NvModel_debug clean_NvUI_debug
 	rm -rf $(DEPSDIR)
 
 
-clean_release: clean_NvUI_release 
+clean_release: clean_NvAppBase_release clean_NvAssetLoader_release clean_NvEGLUtil_release clean_NvGLUtils_release clean_NvGamepad_release clean_NvModel_release clean_NvUI_release
 	rm -rf $(DEPSDIR)
 
 
