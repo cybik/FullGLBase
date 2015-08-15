@@ -46,6 +46,12 @@ clean_release: clean_NvUI_release
 	rm -rf $(DEPSDIR)
 
 
+include Makefile.NvAppBase.mk
+include Makefile.NvAssetLoader.mk
+include Makefile.NvEGLUtil.mk
+include Makefile.NvGLUtils.mk
+include Makefile.NvGamepad.mk
+include Makefile.NvModel.mk
 include Makefile.NvUI.mk
 
 
